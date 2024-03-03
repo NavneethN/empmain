@@ -21,8 +21,9 @@ public class EmployeeController {
     private EmployeeRepository employeeRepository;
     
     @GetMapping("/home")
-   public void home(){
+   public String home(){
     System.out.println("Hello World");
+    return "Hello";
     }
     @PostMapping("emp")
     public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
