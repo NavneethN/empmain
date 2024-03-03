@@ -19,7 +19,11 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
-
+    
+    @GetMapping("/home")
+   public void home(){
+    System.out.println("Hello World");
+    }
     @PostMapping("emp")
     public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
         try {
